@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>EJ&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Normal Flow마크업 된 순서대로 요소들이 자연스럽게 배치되는 흐름을 말한다.  nomarl flow에서는 요소가 갖고 있는 기본 display값에 따라 요소들이 배치된다.   모든 요소들은 지정된 width, height값과 상관 없이 눈에 보이지 않지만, 스타일을 통해 자유롭게 이동 또는 배치될 수 있는 영역을 갖게 된다.블록 요소는 자신의 콘텐츠">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EJ&#39;s Blog">
+<meta property="og:url" content="https://github.com/ejinaaa/2020/10/22/flow-bfc/index.html">
+<meta property="og:site_name" content="EJ&#39;s Blog">
+<meta property="og:description" content="Normal Flow마크업 된 순서대로 요소들이 자연스럽게 배치되는 흐름을 말한다.  nomarl flow에서는 요소가 갖고 있는 기본 display값에 따라 요소들이 배치된다.   모든 요소들은 지정된 width, height값과 상관 없이 눈에 보이지 않지만, 스타일을 통해 자유롭게 이동 또는 배치될 수 있는 영역을 갖게 된다.블록 요소는 자신의 콘텐츠">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-22T13:29:52.000Z">
+<meta property="article:modified_time" content="2020-10-29T19:01:36.274Z">
+<meta property="article:author" content="Eunjin Kang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="EJ&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">EJ&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/ejinaaa"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-flow-bfc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/22/flow-bfc/" class="article-date">
+  <time datetime="2020-10-22T13:29:52.000Z" itemprop="datePublished">2020-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Normal-Flow"><a href="#Normal-Flow" class="headerlink" title="Normal Flow"></a>Normal Flow</h1><p>마크업 된 순서대로 요소들이 자연스럽게 배치되는 흐름을 말한다.<br><br></p>
+<ul>
+<li><p>nomarl flow에서는 요소가 갖고 있는 기본 display값에 따라 요소들이 배치된다.</p>
+<br>
+</li>
+<li><p>모든 요소들은 지정된 width, height값과 상관 없이 눈에 보이지 않지만, 스타일을 통해 자유롭게 이동 또는 배치될 수 있는 영역을 갖게 된다.<br>블록 요소는 자신의 콘텐츠의 높이와 부모 요소의 너비만큼의 영역을 갖게 되고, 인라인 요소는 자신의 콘텐츠의 높이와 콘텐츠의 너비만큼의 영역을 갖게 된다.<br>이 때 블록 요소가 갖게 되는 영역을 BFC, 인라인 요소가 갖는 영역을 IFC라고 한다. </p>
+<br>
+
+<p>이 때문에 블록 요소는 수직으로 떨어져 배치가 되고(BFC의 너비가 부모의 너비만큼 꽉 차게 너비를 갖게 되므로 옆으로 붙을 공간이 없음), 인라인 요소는 (자신이 갖고 있는 콘텐츠 만큼의 너비만 갖고 있으므로 부모영역을 벗어나지 않는 한) 한 라인 안에 수평으로 붙어 배치가 된다. </p>
+<br>
+</li>
+<li><p>Normal flow에 따라 배치 되는 것은 컴퓨터가 보여주는 방식이고 요소에 css로 특정 속성을 이용해 해당 요소에 새로운 BFC 영역을 생성할 수 있다.</p>
+<br>
+</li>
+<li><p>BFC가 생성되는 요소 및 상황</p>
+<ul>
+<li>html 루트</li>
+<li>float(none제외), position(static제외), overflow(visible제외), display: inline-block속성을 가졌을 때</li>
+<li>display table값들을 가졌을 때(table요소들)</li>
+<li>display: flex값을 줬을 때 자식 아이템들</li>
+<li>display: grid값을 줬을 때 자식 아이템들<br>
+
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="float-BFC"><a href="#float-BFC" class="headerlink" title="float BFC"></a>float BFC</h1><ul>
+<li><p>float이 됐을 때 해당 요소가 블록이던 인라인이던 모두 블록 요소로 바뀌게 되고 normal flow를 벗어나 부유되어 새로운 (역시나 부모 너비 만큼의)BFC영역이 생성되며, float속성을 준 요소는 자신의 앞(에 마크업된) 형제 요소에 영향을 받아 배치될 곳이 결정된다.</p>
+<br>
+</li>
+<li><p>float속성을 준 형제 요소들이 바로 인접해있다면 그들은 새로 생겨난 float BFC영역을 공유하게되어 옆으로 붙어 배치가 되는데, 만약 float속성을 준 요소의 바로 앞(에 마크업된) 형제 요소가 float되지 않았을 경우 상황은 조금 다르다.</p>
+<br>
+
+<ul>
+<li><p>float된 요소의 앞 형제 요소가 블록 요소(BFC)일 경우<br>이 요소는 부모 영역 만큼의 BFC 영역을 갖고 있기 때문에 더이상 들어갈 공간이 없으므로 그 앞 형제 요소의 BFC 영역 밑으로 떨어져 배치가 된다.</p>
+<br>
+</li>
+<li><p>float된 요소의 앞 형제 요소가 인라인 요소일 경우<br>인라인 요소들은 float된 요소들과 같은 BFC를 공유하게 되고, float된 요소들보다 뒷 순서로 밀려나 배치되게 된다. </p>
+<br>
+</li>
+</ul>
+</li>
+<li><p>normal flow 안에서는 자신이 갖고 있는 기본 display값에 따라 떨어져 배치될지 옆으로 붙어 배치될지가 결정되는데, float이 된 상태나 형제가 float이 됐을 때는 자신의 앞 요소의 영향을 받아 어떻게 배치될지가 결정된다.</p>
+<br>
+
+</li>
+</ul>
+<h2 id="overflow-BFC"><a href="#overflow-BFC" class="headerlink" title="overflow BFC"></a>overflow BFC</h2><ul>
+<li>블록 요소에만 지정할 수 있고, visible값을 제외한 overflow속성의 값이 지정된 요소는 overflow라는 속성이지닌 특성상 자신의 영역을 벗어난 자식들을 컨트롤 해야하기 때문에 일단 자식의 BFC영역을 자기 영역 안에 담으려고 한다. 이에 따라 자식이 float되어 높이를 잃어버린 (height값을 지정되지 않아서)요소에  overflow를 주었을 때 float된 자식의 높이를 모두 담을 수 있게되어 편법으로 많이 사용된다.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/ejinaaa/2020/10/22/flow-bfc/" data-id="ckgv777r40004l4vy16faaju3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/23/hidden-contetns/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          숨김 콘텐츠 처리 방법
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/19/bem/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">BEM (CSS 방법론)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/html-css/">html/css</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" rel="tag">css방법론</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" rel="tag">네이밍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BEM/" style="font-size: 10px;">BEM</a> <a href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" style="font-size: 10px;">css방법론</a> <a href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" style="font-size: 10px;">네이밍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/23/hidden-contetns/">숨김 콘텐츠 처리 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/22/flow-bfc/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/19/bem/">BEM (CSS 방법론)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Eunjin Kang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

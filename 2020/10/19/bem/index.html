@@ -10,13 +10,13 @@
   <meta name="description" content="CSS 방법론CSS 구조를 개선시켜 코드를 읽기 쉽고 효율적으로 만들어 개발 속도를 높이고 디버깅 및 레거시 코드의 새로운 기능 구현을 크게 향상시키기 위해 사용되는 CSS 네이밍 규칙.OOCSS, SMACSS, BEM 등이 표준으로 많이 사용되고 있음. BEM(Block Element Modifier) BEM 방법론은 id속성은 사용하지 않고 오직 cla">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BEM (CSS 방법론)">
-<meta property="og:url" content="https://github.com/ejinaaa/2020/10/19/html-css-201019-2-bem/index.html">
+<meta property="og:url" content="https://github.com/ejinaaa/2020/10/19/bem/index.html">
 <meta property="og:site_name" content="EJ&#39;s Blog">
 <meta property="og:description" content="CSS 방법론CSS 구조를 개선시켜 코드를 읽기 쉽고 효율적으로 만들어 개발 속도를 높이고 디버깅 및 레거시 코드의 새로운 기능 구현을 크게 향상시키기 위해 사용되는 CSS 네이밍 규칙.OOCSS, SMACSS, BEM 등이 표준으로 많이 사용되고 있음. BEM(Block Element Modifier) BEM 방법론은 id속성은 사용하지 않고 오직 cla">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://t1.daumcdn.net/cfile/tistory/235E3133568B047227">
 <meta property="article:published_time" content="2020-10-19T13:17:01.000Z">
-<meta property="article:modified_time" content="2020-10-21T16:54:26.203Z">
+<meta property="article:modified_time" content="2020-10-28T16:13:49.945Z">
 <meta property="article:author" content="Eunjin Kang">
 <meta property="article:tag" content="css방법론">
 <meta property="article:tag" content="네이밍">
@@ -71,9 +71,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-html-css-201019-2-bem" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/19/html-css-201019-2-bem/" class="article-date">
+    <a href="/2020/10/19/bem/" class="article-date">
   <time datetime="2020-10-19T13:17:01.000Z" itemprop="datePublished">2020-10-19</time>
 </a>
     
@@ -109,16 +109,16 @@
 <h3 id="Element-요소"><a href="#Element-요소" class="headerlink" title="Element(요소)"></a>Element(요소)</h3><p>요소(Element)는 블록이 포함하고 있는 한 조각. 블록은 전체를 말하고 요소들은 블록 안에 있는 조각들을 말함. 각 요소는 두 개의 _(underscore)로 연결하여 블록 다음에 위치시킴.</p>
 <h3 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h3><p>블록이나 요소의 외관, 상태를 변화시킬 때 사용. 요소의 스타일이 같다면 다른 영역(다른 블록 안의 요소)이라 할지라도 새로운 클래스를 정의하지 않고 뒤에 -(dash)를 두 개 추가하고 modifier를 표시함. 절대적으로 필요하지 않는 이상, 추가적인 class를 만들거나 똑같은 스타일을 반복하지 않음.<br>예시) <code>.header__navigation‐‐secondary &#123;…&#125;</code></p>
 <h3 id="BEM-사용-예제"><a href="#BEM-사용-예제" class="headerlink" title="BEM 사용 예제"></a>BEM 사용 예제</h3><p>HTML</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;media&quot;&gt; </span><br><span class="line">    &lt;img src&#x3D;&quot;logo.png&quot; alt&#x3D;&quot;Foo Corp logo&quot; class&#x3D;&quot;media__img--rev&quot;&gt; </span><br><span class="line">    &lt;div class&#x3D;&quot;media__body&quot;&gt; </span><br><span class="line">        &lt;h3 class&#x3D;&quot;alpha&quot;&gt;Welcome to Foo Corp&lt;&#x2F;h3&gt; </span><br><span class="line">        &lt;p class&#x3D;&quot;lede&quot;&gt;Foo Corp is the best, seriously!&lt;&#x2F;p&gt; </span><br><span class="line">    &lt;&#x2F;div&gt; </span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;media&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Foo Corp logo&quot;</span> <span class="attr">class</span>=<span class="string">&quot;media__img--rev&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;media__body&quot;</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;alpha&quot;</span>&gt;</span>Welcome to Foo Corp<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;lede&quot;</span>&gt;</span>Foo Corp is the best, seriously!<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>CSS</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.header__logo &#123; ... &#125; </span><br><span class="line">.header__tagline &#123; ... &#125; </span><br><span class="line">.header__searchbar &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation--secondary &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.header__logo &#123; ... &#125; </span><br><span class="line">.header__tagline &#123; ... &#125; </span><br><span class="line">.header__searchbar &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation--secondary &#123; ... &#125;</span><br></pre></td></tr></table></figure>
 
 <p>참조 : <a target="_blank" rel="noopener" href="https://webclub.tistory.com/263">https://webclub.tistory.com/263</a><br>참조 : <a target="_blank" rel="noopener" href="http://getbem.com/naming/">http://getbem.com/naming/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/ejinaaa/2020/10/19/html-css-201019-2-bem/" data-id="ckgljx3j40004dwvyhjjc3vu4" class="article-share-link">Share</a>
+      <a data-url="https://github.com/ejinaaa/2020/10/19/bem/" data-id="ckgv777qf0000l4vyh59n4q6c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" rel="tag">css방법론</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" rel="tag">네이밍</a></li></ul>
@@ -129,20 +129,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/10/19/html-css-201019-3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/22/flow-bfc/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          HTML 기본 구조와 레이아웃
+          (no title)
         
       </div>
     </a>
   
-  
-    <a href="/2020/10/19/html-css-201019-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">HTML 구조 설계시 고려사항, 웹폰트</div>
-    </a>
   
 </nav>
 
@@ -157,7 +152,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git-github/">git/github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/html-css/">html/css</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/html-css/">html/css</a></li></ul>
     </div>
   </div>
 
@@ -167,7 +162,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/" rel="tag">command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" rel="tag">css방법론</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/float/" rel="tag">float</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" rel="tag">네이밍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%9B%B9%ED%8F%B0%ED%8A%B8/" rel="tag">웹폰트</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" rel="tag">css방법론</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" rel="tag">네이밍</a></li></ul>
     </div>
   </div>
 
@@ -177,7 +172,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/BEM/" style="font-size: 10px;">BEM</a> <a href="/tags/command/" style="font-size: 10px;">command</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" style="font-size: 10px;">css방법론</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/float/" style="font-size: 10px;">float</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/html/" style="font-size: 20px;">html</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" style="font-size: 10px;">네이밍</a> <a href="/tags/%EC%9B%B9%ED%8F%B0%ED%8A%B8/" style="font-size: 10px;">웹폰트</a>
+      <a href="/tags/BEM/" style="font-size: 10px;">BEM</a> <a href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" style="font-size: 10px;">css방법론</a> <a href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" style="font-size: 10px;">네이밍</a>
     </div>
   </div>
 
@@ -199,23 +194,15 @@
       <ul>
         
           <li>
-            <a href="/2020/10/23/til-201023/">201023</a>
+            <a href="/2020/10/23/hidden-contetns/">숨김 콘텐츠 처리 방법</a>
           </li>
         
           <li>
-            <a href="/2020/10/23/web-accessibility/">웹 접근성</a>
+            <a href="/2020/10/22/flow-bfc/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2020/10/20/html-css-201020/">CSS tip, 요소 정렬 방법</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/19/til-201019/">201019</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/19/html-css-201019-3/">HTML 기본 구조와 레이아웃</a>
+            <a href="/2020/10/19/bem/">BEM (CSS 방법론)</a>
           </li>
         
       </ul>

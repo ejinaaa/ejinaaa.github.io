@@ -5,13 +5,17 @@
   
 
   
-  <title>EJ&#39;s Blog</title>
+  <title>숨김 콘텐츠 처리 방법 | EJ&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="EJ&#39;s Blog">
-<meta property="og:url" content="https://github.com/ejinaaa/index.html">
+  <meta name="description" content="숨김 콘텐츠 마크업은 일종의 섹션과 그 하위 섹션을 구분하는 개념으로 &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;를 사용해 섹션의 제목을 정의하는데 이런 섹션의 구획 요소와 제목 요소의 관계가 아웃라인을 형성하게 됨.이 때 아웃라인 구조에는 들어가야 하지만 눈으로는 해당 요소">
+<meta property="og:type" content="article">
+<meta property="og:title" content="숨김 콘텐츠 처리 방법">
+<meta property="og:url" content="https://github.com/ejinaaa/2020/10/23/hidden-contetns/index.html">
 <meta property="og:site_name" content="EJ&#39;s Blog">
+<meta property="og:description" content="숨김 콘텐츠 마크업은 일종의 섹션과 그 하위 섹션을 구분하는 개념으로 &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;를 사용해 섹션의 제목을 정의하는데 이런 섹션의 구획 요소와 제목 요소의 관계가 아웃라인을 형성하게 됨.이 때 아웃라인 구조에는 들어가야 하지만 눈으로는 해당 요소">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-23T13:30:38.000Z">
+<meta property="article:modified_time" content="2020-10-29T01:14:01.790Z">
 <meta property="article:author" content="Eunjin Kang">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hidden-contetns" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hidden-contetns" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/23/hidden-contetns/" class="article-date">
   <time datetime="2020-10-23T13:30:38.000Z" itemprop="datePublished">2020-10-23</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/hidden-contetns/">숨김 콘텐츠 처리 방법</a>
+    <h1 class="article-title" itemprop="name">
+      숨김 콘텐츠 처리 방법
     </h1>
   
 
@@ -140,146 +142,19 @@ IR기법으로 많이 사용되는 방법이지만 위의 `position: absolute`�
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-flow-bfc" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/22/flow-bfc/" class="article-date">
-  <time datetime="2020-10-22T13:29:52.000Z" itemprop="datePublished">2020-10-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Normal-Flow"><a href="#Normal-Flow" class="headerlink" title="Normal Flow"></a>Normal Flow</h1><p>마크업 된 순서대로 요소들이 자연스럽게 배치되는 흐름을 말한다.<br><br></p>
-<ul>
-<li><p>nomarl flow에서는 요소가 갖고 있는 기본 display값에 따라 요소들이 배치된다.</p>
-<br>
-</li>
-<li><p>모든 요소들은 지정된 width, height값과 상관 없이 눈에 보이지 않지만, 스타일을 통해 자유롭게 이동 또는 배치될 수 있는 영역을 갖게 된다.<br>블록 요소는 자신의 콘텐츠의 높이와 부모 요소의 너비만큼의 영역을 갖게 되고, 인라인 요소는 자신의 콘텐츠의 높이와 콘텐츠의 너비만큼의 영역을 갖게 된다.<br>이 때 블록 요소가 갖게 되는 영역을 BFC, 인라인 요소가 갖는 영역을 IFC라고 한다. </p>
-<br>
+  
+    <a href="/2020/10/22/flow-bfc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-<p>이 때문에 블록 요소는 수직으로 떨어져 배치가 되고(BFC의 너비가 부모의 너비만큼 꽉 차게 너비를 갖게 되므로 옆으로 붙을 공간이 없음), 인라인 요소는 (자신이 갖고 있는 콘텐츠 만큼의 너비만 갖고 있으므로 부모영역을 벗어나지 않는 한) 한 라인 안에 수평으로 붙어 배치가 된다. </p>
-<br>
-</li>
-<li><p>Normal flow에 따라 배치 되는 것은 컴퓨터가 보여주는 방식이고 요소에 css로 특정 속성을 이용해 해당 요소에 새로운 BFC 영역을 생성할 수 있다.</p>
-<br>
-</li>
-<li><p>BFC가 생성되는 요소 및 상황</p>
-<ul>
-<li>html 루트</li>
-<li>float(none제외), position(static제외), overflow(visible제외), display: inline-block속성을 가졌을 때</li>
-<li>display table값들을 가졌을 때(table요소들)</li>
-<li>display: flex값을 줬을 때 자식 아이템들</li>
-<li>display: grid값을 줬을 때 자식 아이템들<br>
-
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="float-BFC"><a href="#float-BFC" class="headerlink" title="float BFC"></a>float BFC</h1><ul>
-<li><p>float이 됐을 때 해당 요소가 블록이던 인라인이던 모두 블록 요소로 바뀌게 되고 normal flow를 벗어나 부유되어 새로운 (역시나 부모 너비 만큼의)BFC영역이 생성되며, float속성을 준 요소는 자신의 앞(에 마크업된) 형제 요소에 영향을 받아 배치될 곳이 결정된다.</p>
-<br>
-</li>
-<li><p>float속성을 준 형제 요소들이 바로 인접해있다면 그들은 새로 생겨난 float BFC영역을 공유하게되어 옆으로 붙어 배치가 되는데, 만약 float속성을 준 요소의 바로 앞(에 마크업된) 형제 요소가 float되지 않았을 경우 상황은 조금 다르다.</p>
-<br>
-
-<ul>
-<li><p>float된 요소의 앞 형제 요소가 블록 요소(BFC)일 경우<br>이 요소는 부모 영역 만큼의 BFC 영역을 갖고 있기 때문에 더이상 들어갈 공간이 없으므로 그 앞 형제 요소의 BFC 영역 밑으로 떨어져 배치가 된다.</p>
-<br>
-</li>
-<li><p>float된 요소의 앞 형제 요소가 인라인 요소일 경우<br>인라인 요소들은 float된 요소들과 같은 BFC를 공유하게 되고, float된 요소들보다 뒷 순서로 밀려나 배치되게 된다. </p>
-<br>
-</li>
-</ul>
-</li>
-<li><p>normal flow 안에서는 자신이 갖고 있는 기본 display값에 따라 떨어져 배치될지 옆으로 붙어 배치될지가 결정되는데, float이 된 상태나 형제가 float이 됐을 때는 자신의 앞 요소의 영향을 받아 어떻게 배치될지가 결정된다.</p>
-<br>
-
-</li>
-</ul>
-<h2 id="overflow-BFC"><a href="#overflow-BFC" class="headerlink" title="overflow BFC"></a>overflow BFC</h2><ul>
-<li>블록 요소에만 지정할 수 있고, visible값을 제외한 overflow속성의 값이 지정된 요소는 overflow라는 속성이지닌 특성상 자신의 영역을 벗어난 자식들을 컨트롤 해야하기 때문에 일단 자식의 BFC영역을 자기 영역 안에 담으려고 한다. 이에 따라 자식이 float되어 높이를 잃어버린 (height값을 지정되지 않아서)요소에  overflow를 주었을 때 float된 자식의 높이를 모두 담을 수 있게되어 편법으로 많이 사용된다.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://github.com/ejinaaa/2020/10/22/flow-bfc/" data-id="ckgv777r40004l4vy16faaju3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-bem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/19/bem/" class="article-date">
-  <time datetime="2020-10-19T13:17:01.000Z" itemprop="datePublished">2020-10-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/html-css/">html/css</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/19/bem/">BEM (CSS 방법론)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="CSS-방법론"><a href="#CSS-방법론" class="headerlink" title="CSS 방법론"></a>CSS 방법론</h2><p>CSS 구조를 개선시켜 코드를 읽기 쉽고 효율적으로 만들어 개발 속도를 높이고 디버깅 및 레거시 코드의 새로운 기능 구현을 크게 향상시키기 위해 사용되는 CSS 네이밍 규칙.<br>OOCSS, SMACSS, BEM 등이 표준으로 많이 사용되고 있음.</p>
-<h1 id="BEM-Block-Element-Modifier"><a href="#BEM-Block-Element-Modifier" class="headerlink" title="BEM(Block Element Modifier)"></a>BEM(Block Element Modifier)</h1><ul>
-<li>BEM 방법론은 id속성은 사용하지 않고 오직 class만 부여함.</li>
-<li>두 개 이상의 단어를 조합할 땐 -(dash)로 이어주고 블록과 요소의 관계를 나타낼 때엔 _(underscore)를 두번 사용해 이어줌.<br>예시)<br><code>.block__element‐‐modifier &#123; property: value; &#125;</code></li>
-<li>class명을 지을 때의 목적은 그 요소를 반복하여 재사용할 수 있게 하기 위함. 모든 class명은 구체적이고 명료하고 직관적으로 무엇을 나타내는지 누구나 이해할 수 있게 지어주는 것이 좋음.</li>
-<li>각 html 태그에는 오직 class명 하나만 사용해야함. 한 태그 안에 두 개 이상 class 사용하지 않음.</li>
-</ul>
-<h3 id="Block-전체를-감싸고-있는-블록요소"><a href="#Block-전체를-감싸고-있는-블록요소" class="headerlink" title="Block(전체를 감싸고 있는 블록요소)"></a>Block(전체를 감싸고 있는 블록요소)</h3><p>블록(block)은 요소들를 담고 있는 컨테이너로 큰 맥락의 구조. header, main, aside, footer등.<br>블록 요소는 class의 어근을 형성하고 항상 맨 앞에 위치하도록 함.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/235E3133568B047227" alt="블록 설명 이미지"></p>
-<h3 id="Element-요소"><a href="#Element-요소" class="headerlink" title="Element(요소)"></a>Element(요소)</h3><p>요소(Element)는 블록이 포함하고 있는 한 조각. 블록은 전체를 말하고 요소들은 블록 안에 있는 조각들을 말함. 각 요소는 두 개의 _(underscore)로 연결하여 블록 다음에 위치시킴.</p>
-<h3 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h3><p>블록이나 요소의 외관, 상태를 변화시킬 때 사용. 요소의 스타일이 같다면 다른 영역(다른 블록 안의 요소)이라 할지라도 새로운 클래스를 정의하지 않고 뒤에 -(dash)를 두 개 추가하고 modifier를 표시함. 절대적으로 필요하지 않는 이상, 추가적인 class를 만들거나 똑같은 스타일을 반복하지 않음.<br>예시) <code>.header__navigation‐‐secondary &#123;…&#125;</code></p>
-<h3 id="BEM-사용-예제"><a href="#BEM-사용-예제" class="headerlink" title="BEM 사용 예제"></a>BEM 사용 예제</h3><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;media&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Foo Corp logo&quot;</span> <span class="attr">class</span>=<span class="string">&quot;media__img--rev&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;media__body&quot;</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;alpha&quot;</span>&gt;</span>Welcome to Foo Corp<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;lede&quot;</span>&gt;</span>Foo Corp is the best, seriously!<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>CSS</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.header__logo &#123; ... &#125; </span><br><span class="line">.header__tagline &#123; ... &#125; </span><br><span class="line">.header__searchbar &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation &#123; ... &#125; </span><br><span class="line">.header__navigation--secondary &#123; ... &#125;</span><br></pre></td></tr></table></figure>
-
-<p>참조 : <a target="_blank" rel="noopener" href="https://webclub.tistory.com/263">https://webclub.tistory.com/263</a><br>참조 : <a target="_blank" rel="noopener" href="http://getbem.com/naming/">http://getbem.com/naming/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://github.com/ejinaaa/2020/10/19/bem/" data-id="ckgv777qf0000l4vyh59n4q6c" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css%EB%B0%A9%EB%B2%95%EB%A1%A0/" rel="tag">css방법론</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%EB%84%A4%EC%9D%B4%EB%B0%8D/" rel="tag">네이밍</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
